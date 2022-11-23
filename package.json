@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "start": "node index.js",
+    "start": "node src/index.js",
     "test": "ts-node --files ./src/index.ts"
   },
   "repository": {
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/danneh-0427/decoLapsBackend#readme",
   "dependencies": {
+    "@fastify/oauth2": "^6.1.0",
+    "dotenv": "^16.0.3",
     "fastify": "^4.10.0",
     "fastify-jwt": "^4.2.0",
     "fastify-plugin": "^4.3.0",
