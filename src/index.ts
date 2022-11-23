@@ -1,12 +1,15 @@
 import fastify from 'fastify';
+import dotenv from 'dotenv';
+
+import router from './api';
+
+dotenv.config();
 
 const server = fastify();
 
-server.get('/', async (request, reply) => {
-  return { hello: 'world' };
-});
+server.register(router);
 
-server.listen({ port: 8000 }, function (err, address) {
+server.listen({ port: 8000 }, (err, address) => {
   if (err) throw err;
   server.log.info(`server listening on ${address}`);
 });
