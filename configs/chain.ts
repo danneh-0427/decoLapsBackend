@@ -2,8 +2,8 @@ import { ChainInfo } from "@keplr-wallet/types";
 import { Bech32Address } from "@keplr-wallet/cosmos";
 
 export const chainInfo: ChainInfo = {
-    rpc: "http://chain-rpc.decolaps.5-server.gw.susuyo.ai",
-    rest: "https://chain-api.decolaps.5-server.gw.susuyo.ai",
+    rpc: "http://0.0.0.0:26657",
+    rest: "http://0.0.0.0:1317",
     chainId: "decolaps-testnet-1",
     chainName: "Decolaps",
     stakeCurrency: {
