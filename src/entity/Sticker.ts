@@ -1,14 +1,11 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity()
-export class User {
+export class Sticker {
 
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  nickname: string;
-  
-  @Column()
-  githubUserCode: number;
+  name: string;
 }
