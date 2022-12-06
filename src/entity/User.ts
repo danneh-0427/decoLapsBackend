@@ -1,7 +1,9 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
+import DecoProfile from "./DecoProfile";
+import Sticker from "./Sticker";
 
 @Entity()
-export class User {
+export default class User {
 
   @PrimaryGeneratedColumn()
   id: number;
@@ -10,5 +12,14 @@ export class User {
   nickname: string;
   
   @Column()
-  githubUserCode: number;
+  githubUserCode: string;
+  
+  @Column()
+  walletId: string;
+  
+  @OneToMany(() => DecoProfile, (profiles) => profiles.user)
+  profiles: DecoProfile[];
+  
+  @OneToMany(() => Sticker, (createdStickers) => createdStickers.creator)
+  createdStickers: Sticker[];
 }

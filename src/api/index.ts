@@ -1,5 +1,3 @@
-import { AppDataSource } from "../data-source";
-
 const router = async (fastify, options) => {
   fastify.get('/', async (req, reply) => {
     console.log("GET /");
