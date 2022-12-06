@@ -12,7 +12,7 @@ AppDataSource.initialize().then(async () => {
 
   server.register(router);
 
-  server.listen({ port: 80 }, (err, address) => {
+  server.listen({ port: 8000 }, (err, address) => {
     if (err) throw err;
     
     server.log.info(`server listening on ${address}`);
