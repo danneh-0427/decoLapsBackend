@@ -7,6 +7,7 @@ import Sticker from "./entity/Sticker";
 import Deco from "./entity/Deco";
 import DecoInfo from "./entity/DecoInfo";
 import DecoProfile from "./entity/DecoProfile";
+import StickerObtain from "./entity/StickerObtain";
 
 const AppDataSource = new DataSource({
     type: "postgres",
@@ -23,6 +24,7 @@ const AppDataSource = new DataSource({
         Deco,
         DecoInfo,
         DecoProfile,
+        StickerObtain,
     ],
     migrations: [],
     subscribers: [],

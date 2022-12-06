@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany, OneToOne, ManyToOne } from "typeorm";
 
 import User from "./User";
 
@@ -8,7 +8,7 @@ export default class Sticker {
   @PrimaryGeneratedColumn()
   id: number;
   
-  @OneToMany(() => User, (creator) => creator.createdStickers)
+  @ManyToOne(() => User, (creator) => creator.createdStickers)
   creator: User;
 
   @Column()
