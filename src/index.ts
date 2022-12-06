@@ -12,17 +12,7 @@ AppDataSource.initialize().then(async () => {
 
   server.register(router);
 
-  /////////// TEST CODE /////////////
-  
-  const userRepo = AppDataSource.getRepository(User);
-  const user = new User();
-  user.nickname = "asdf";
-  user.githubUserCode = "123";
-  user.walletId = "ASdfadsf";
-  await userRepo.save(user);
-  
-  ///////////////////////////////////
-  server.listen({ port: 8000 }, (err, address) => {
+  server.listen({ port: 80 }, (err, address) => {
     if (err) throw err;
     
     server.log.info(`server listening on ${address}`);
